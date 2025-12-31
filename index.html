@@ -3,135 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhadra M U</title>
-    <meta name="keywords" content="Bhadra, Bhadra M U, Bhadra Portfolio, Bhadra M U portfolio, Bhadra Thrissur, Bhadra Full Stack Developer">
-    <meta name="description" content="The official website of Bhadra M U. Learn more about my work , read my blog, and get in touch.">
-    <meta property="og:title" content="Bhadra M U - Portfolio">
-    <meta property="og:url" content="https://bhadra-unni.github.io/portfolio/">
+    <title>Bhadra M U | Full Stack Developer</title>
+    <meta name="keywords" content="Bhadra, Bhadra M U, Full Stack Developer, Portfolio, Web Developer Thrissur">
+    <meta name="description" content="Portfolio of Bhadra M U, a Full Stack Developer specializing in scalable web applications.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Linked CSS File -->
     <link rel="stylesheet" href="style.css">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Bhadra M U",
-  "url": "https://bhadra-unni.github.io/portfolio/",
-  "jobTitle": "Full Stack Developer",
-  "sameAs": [
-    "https://www.linkedin.com/in/bhadra-m-u",
-    "https://github.com/bhadra-unni"
-  ]
-}
-</script>
 </head>
 <body>
 
 <header>
     <nav>
         <a href="#projects">Projects</a>
-        <a href="#about">About Me</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact Me</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <main>
 
-    <!-- Intro -->
-    <section class="intro card" id="home">
+    <!-- Intro Section (Center Aligned) -->
+    <section class="intro" id="home">
         <h1>Hi, I'm Bhadra</h1>
         <p>
             I’m a full-stack developer who builds scalable web applications using modern
             front-end frameworks and backend APIs. I specialize in turning complex
             requirements into clean, maintainable code.
         </p>
-        <a href="#projects">My Works</a>
-        <a href="#contact">Contact Me</a>
-        <!-- <a href="#resume">Resume</a> -->
+        <div class="btn-group">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
     </section>
 
-    <!-- Projects -->
-    <section class="project card" id="projects">
+    <!-- Projects Section (Grid on Desktop, Swipe Slider on Mobile) -->
+    <section class="section-container" id="projects">
         <h2>My Projects</h2>
-
-        <div class="pro card-inner">
-            <h3>Doctor Appointment Booking System</h3>
-            <p>Full-stack application for booking doctor appointments with real-time availability.</p>
-            <a href="#">View</a>
-            <a href="#">More Details</a>
-        </div>
-
-        <div class="pro card-inner">
-            <h3>StyleHub: Ecommerce Website</h3>
-            <p>Modern ecommerce platform for browsing and purchasing clothing.</p>
-            <a href="#">View</a>
-            <a href="#">More Details</a>
-        </div>
-
-        <div class="pro card-inner">
-            <h3>Simple Task Manager</h3>
-            <p>Task management application with clean and intuitive UI.</p>
-            <a href="#">View</a>
-            <a href="#">More Details</a>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="skills card" id="skills">
-        <h2>Skills & Technologies</h2>
-        <ul>
-            <li>HTML5, CSS3, JavaScript (ES6+)</li>
-            <li>React</li>
-            <li>Node.js, Express.js, Django</li>
-            <li>MongoDB, PostgreSQL, MySQL</li>
-            <li>Git, GitHub</li>
-            <li>Docker, AWS, Heroku</li>
-        </ul>
-    </section>
-
-    <!-- About -->
-    <section class="about card" id="about">
-        <h2>About Me</h2>
-
-        <div class="card-inner">
-            <p>
-                I'm a passionate full-stack developer who enjoys solving complex problems
-                and creating efficient, user-friendly applications. 
-            </p>
+        
+        <!-- Note: This container uses CSS Scroll Snap for mobile sliding without JS -->
+        <div class="projects-grid">
             
-        </div>
+            <!-- Project 1 -->
+            <article class="project-card">
+                <div class="card-content">
+                    <h3>Doctor Appointment Booking System</h3>
+                    <p>Full-stack application for booking doctor appointments with real-time availability and admin dashboard.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="#">View Live</a>
+                    <a href="#">Details</a>
+                </div>
+            </article>
 
-        <div class="education card-inner">
-            <h3>Education</h3>
-            <ul>
-                <li>B.Tech Computer Science – APJ Abdul Kalam Technological University (2027)</li>
-                <li>Higher Secondary – St. Joseph’s HSS, Pavaratty (2023)</li>
-            </ul>
+            <!-- Project 2 -->
+            <article class="project-card">
+                <div class="card-content">
+                    <h3>StyleHub</h3>
+                    <p>A modern ecommerce platform for browsing and purchasing clothing with secure payment integration.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="#">View Live</a>
+                    <a href="#">Details</a>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+                <div class="card-content">
+                    <h3>Task Tracker</h3>
+                    <p>Task management application with clean UI, categorization, and local storage persistence.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="#">View Live</a>
+                    <a href="#">Details</a>
+                </div>
+            </article>
+
+        </div>
+        <!-- Visual cue for mobile users -->
+        <p class="mobile-hint">Swipe to see more projects &rarr;</p>
+    </section>
+
+
+    <!-- Skills Section (Categorized Cards with Levels) -->
+    <section class="section-container" id="skills">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-wrapper">
+            
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML5 & CSS3 <span class="level">Advanced</span></li>
+                    <li>JavaScript (ES6+) <span class="level">Advanced</span></li>
+                    <li>React.js <span class="level">Advanced</span></li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Backend</h3>
+                <ul>
+                    <li>Node.js & Express <span class="level">Beginner</span></li>
+                    <li>Django <span class="level">Beginner</span></li>
+                    <li>PostgreSQL / MongoDB <span class="level">Advanced</span></li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools & Cloud</h3>
+                <ul>
+                    <li>Git & GitHub <span class="level">Advanced</span></li>
+                   
+                </ul>
+            </div>
+
         </div>
     </section>
 
-    <!-- Resume -->
-    <section class="resume card" id="resume">
-        <h2>Resume</h2>
-        <p>You can view my resume below.</p>
-        <a href="https://drive.google.com/file/d/150ayRdqR7pIn3pjy1a2OgVgqQZj1cHi4/view?usp=drive_link" target="_blank">Resume</a>
+    <!-- About Section (2 Column Layout on Desktop) -->
+    <section class="section-container" id="about">
+        <h2>About Me</h2>
+        
+        <div class="about-grid">
+            <!-- Column 1: Bio -->
+            <div class="about-bio card-inner">
+                <h3>Who I Am</h3>
+                <p>
+                    I'm a passionate full-stack developer based in Kerala. I enjoy solving complex problems
+                    and creating efficient, user-friendly applications. My journey involves continuous learning
+                    and applying modern practices to real-world solutions.
+                </p>
+                <a href="https://drive.google.com/file/d/150ayRdqR7pIn3pjy1a2OgVgqQZj1cHi4/view?usp=drive_link" target="_blank" class="btn btn-outline small">Download Resume</a>
+            </div>
+
+            <!-- Column 2: Education -->
+            <div class="about-education card-inner">
+                <h3>Education</h3>
+                <div class="edu-item">
+                    <h4>B.Tech Computer Science  & Engg</h4>
+                    <span>APJ Abdul Kalam Technological University</span>
+                    <small>Expected 2027</small>
+                </div>
+                <div class="edu-item">
+                    <h4>Higher Secondary</h4>
+                    <span>St. Joseph’s HSS, Pavaratty</span>
+                    <small>Completed 2023</small>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact card" id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via email or LinkedIn.</p>
-        <a href="mailto:bhadraunnim@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/bhadra-m-u" target="_blank">LinkedIn</a>
+    <!-- Contact Section -->
+    <section class="section-container" id="contact">
+        <div class="contact-box">
+            <h2>Get In Touch</h2>
+            <p>Feel free to reach out via email or LinkedIn.</p>
+            <div class="btn-group">
+                <a href="mailto:bhadraunnim@gmail.com" class="btn btn-primary">Email Me</a>
+                <a href="https://www.linkedin.com/in/bhadra-m-u" target="_blank" class="btn btn-outline">LinkedIn</a>
+            </div>
+        </div>
     </section>
 
 </main>
 
 <footer>
-    <p>&copy; 2025 Bhadra. All rights reserved.</p>
+    <p>&copy; 2025 Bhadra M U. All rights reserved.</p>
 </footer>
 
 </body>
 </html>
-
-
-
