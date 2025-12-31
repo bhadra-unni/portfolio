@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Your Palette */
+    --light-sage: #cad2c5;
+    --mid-green: #84a98c;
+    --dark-green: #52796f;
+    --deep-charcoal: #354f52;
+    --deepest-slate: #2f3e46;
+    
+    /* Accessibility & UI Logic */
+    --bg-body: var(--light-sage);
+    --bg-card: #ffffff;
+    --text-main: var(--deepest-slate);   /* High contrast for readability */
+    --text-muted: var(--deep-charcoal);  /* Dark enough for secondary text */
+    --primary-action: var(--deepest-slate);
+    --border-soft: rgba(47, 62, 70, 0.15);
+}
+
+/* --- Base Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Accessibility: Keyboard Navigation --- */
+a:focus, button:focus {
+    outline: 3px solid var(--dark-green);
+    outline-offset: 4px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(202, 210, 197, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-soft);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--dark-green);
+}
+
+/* --- Main Layout --- */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* --- Card Components --- */
+.card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(47, 62, 70, 0.1);
+}
+
+.card-inner {
+    background: #fcfdfc;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* --- Typography --- */
+h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    color: var(--deepest-slate);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--deepest-slate);
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--dark-green);
+    padding-left: 15px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--deep-charcoal);
+    margin-bottom: 0.5rem;
+}
+
+/* --- Intro Section --- */
+.intro {
+    text-align: left;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.intro p {
+    font-size: 1.15rem;
+    margin: 1.5rem 0 2rem;
+    max-width: 700px;
+    color: var(--text-muted);
+}
+
+/* --- Accessible Buttons --- */
+.intro a, .resume a {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--primary-action);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.intro a:hover, .resume a:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+/* Project Links (Secondary Buttons) */
+.pro a {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    color: var(--dark-green);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.pro a:hover {
+    color: var(--deepest-slate);
+}
+
+/* --- Skills Section --- */
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 1rem;
+}
+
+.skills li {
+    background: var(--mid-green);
+    color: var(--deepest-slate); /* High contrast dark text on light green */
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* --- Education Section --- */
+.education ul {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.education li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.education li:last-child {
+    border-bottom: none;
+}
+
+/* --- Contact Section --- */
+.contact a {
+    color: var(--dark-green);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: 20px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: var(--deepest-slate);
+    color: var(--light-sage);
+    margin-top: 4rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+}
